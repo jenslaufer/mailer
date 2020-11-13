@@ -7,7 +7,7 @@ class Mailer:
         self.api_key = api_key
         self.url = f"https://api.{api_loc}mailgun.net/v3/{site}/messages"
 
-    def send(self, sender, recipient, subject, body, attachment):
+    def send(self, sender, recipient, subject, body, attachment=None):
         logging.debug(
             f"{sender}, {recipient}, {subject}, {body}, {attachment}")
 
